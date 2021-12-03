@@ -1,94 +1,3 @@
-3A info - TPSIT - 2021/2022
-3Ai
-tabelline javascript versione 1.1
-Marco Palladino
-•
-26 nov
-100 punti
-Scadenza: 08:00
-stampare tutte 1 al 10 le tabelline sia con alert che con la funzione innerhtml
-
-
-modificare l'output colorando le tabelline in maniera diversa e incrementando il font
-
-
-
-
-
-
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-
-    <style>
-        .btn-group button {
-          background-color: #c5310c; /* Green background */
-          border: 1px solid green; /* Green border */
-          color: white; /* White text */
-          padding: 10px 24px; /* Some padding */
-          cursor: pointer; /* Pointer/hand icon */
-          width: 50%; /* Set a width if needed */
-          display: block; /* Make the buttons appear below each other */
-        }
-       
-        .btn-group button:not(:last-child) {
-          border-bottom: none; /* Prevent double borders */
-        }
-       
-        /* Add a background color on hover */
-        .btn-group button:hover {
-          background-color: #f83d04;
-        }
-        </style>
-
-
-</head>
-<body>
-
-    <h1>Tabelline</h1>
-
-    <div class="btn-group">
-      <button onclick="tabellinadel2()">Tabellina del 2 </button>
-      <button onclick="tabellinadel3()">Tabellina del 3</button>
-      <button onclick="tabellinadel4()">Tabellina del 4</button>
-    </div>
-
-    <p id="output">......</p>
-
-
-
-<script>  
-function tabellinadel2Alert() {
-    alert("2 4 6 8 10 12 14 16 18 20");
-}
-function tabellinadel2() {
-    document.getElementById("output").innerHTML="2 4 6 8 10 12 14 16 18 20";
-}
-
-
-
-
-</script>
-
-
-
-
-   
-</body>
-</html>
-Commenti sul corso
-Il tuo lavoro
-Consegnato
-
-Tabelline dall'1 al 10.html
-HTML
-Commenti privati
-tabelline javascript versione 1.1Consegna in corso...
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -108,7 +17,20 @@ tabelline javascript versione 1.1Consegna in corso...
           display: block; /* Make the buttons appear below each other */
           transition-duration: 0.5s;
         }
-       
+        .btnc {
+          background-color: #ffffff; /* Green background */
+          border: 1px solid rgb(0, 0, 0); /* Green border */
+          color: rgb(0, 0, 0); /* White text */
+          padding: 10px 24px; /* Some padding */
+          cursor: pointer; /* Pointer/hand icon */
+          width: 50%; /* Set a width if needed */
+          display: block; /* Make the buttons appear below each other */
+          transition-duration: 0.5s;
+        }
+       .btnc:hover{
+           color: white;
+           background-color: black;
+       }
         .btn1:hover {
           background-color: #b4b4b4;
         }
@@ -145,44 +67,45 @@ tabelline javascript versione 1.1Consegna in corso...
 
 </head>
 <body>
+    <p>Fai doppio click per l'alert e singolo click per la seconda funzione</p>
     <script>  
-        function tabe1 () {
+        function tabe11 () {
                     alert("1, 2, 3, 4, 5, 6, 7, 8, 9, 10")
 
-        function tabe2 () {
+        function tabe12 () {
                     alert("2, 4, 6 ,8 ,10, 12, 14, 16, 18, 20")
         
                 }
-            function tabe3 () {
+            function tabe13 () {
                     alert("3, 6, 9, 12, 15, 18, 21, 24, 27, 30")
         
                 }
-                function tabe4 () {
+                function tabe14 () {
                     alert("4, 8, 12, 16, 20, 24, 28, 32, 36, 40")
         
                 }
-                function tabe5 () {
+                function tabe15 () {
                     alert("5, 10, 15, 20, 25, 30, 35, 40, 45, 50")
         
                 }
                 
-                function tabe6 () {
+                function tabe16 () {
                     alert("6, 12, 18, 24, 30, 36, 42, 48, 54, 60")
         
                 }
-                function tabe7 () {
+                function tabe17 () {
                     alert("7, 14, 21, 28, 35, 42, 49, 56, 63, 70")
         
                 }
-                function tabe8 () {
+                function tabe18 () {
                     alert("8, 16, 24, 32, 40, 48, 56, 64, 72, 80")
         
                 }
-                function tabe9 () {
+                function tabe19 () {
                     alert("9, 18, 27, 36, 45, 54, 63, 72, 81, 90")
         
                 }
-                function tabe10 () {
+                function tabe110 () {
                     alert("10, 20, 30, 40, 50, 60, 70, 80, 90, 100")
         
                 }
@@ -218,6 +141,9 @@ tabelline javascript versione 1.1Consegna in corso...
         function tabe10() {
             document.getElementById("output").innerHTML="10, 20, 30, 40, 50, 60, 70, 80, 90, 100";
         }
+        function tabeno() {
+            document.getElementById("output").innerHTML=".......................................";
+        }
 
         
         
@@ -225,20 +151,22 @@ tabelline javascript versione 1.1Consegna in corso...
         
         </script>
     <h1>Tabelline</h1>
-    <button class= "btn btn1" ondbclick = "tabe1()">Tabellina dell'1</button>
-    <button class= "btn btn2" ondbclick = "tabe2()">Tabellina dell 2</button>
-    <button class= "btn btn3" ondbclick = "tabe3()">Tabellina del 3</button>
-    <button class= "btn btn4" ondbclick = "tabe4()">Tabellina del 4</button>
-    <button class= "btn btn5" ondbclick = "tabe5()">Tabellina del 5</button>
-    <button class= "btn btn6" ondbclick = "tabe6()">Tabellina del 6</button>
-    <button class= "btn btn7" ondbclick = "tabe7()">Tabellina del 7</button>
-    <button class= "btn btn8" ondbclick = "tabe8()">Tabellina del 8</button>
-    <button class= "btn btn9" ondbclick = "tabe9()">Tabellina del 9</button>
-    <button class= "btn btn10" ondbclick = "tabe10()">Tabellina del 10</button>
+    <button class= "btn btn1" onclick = "tabe1()"; ondblclick="tabe11()">Tabellina dell'1</button>
+    <button class= "btn btn2" onclick = "tabe2()"; ondblclick="tabe12()">Tabellina dell 2</button>
+    <button class= "btn btn3" onclick = "tabe3()"; ondblclick="tabe13()">Tabellina del 3</button>
+    <button class= "btn btn4" onclick = "tabe4()"; ondblclick="tabe14()">Tabellina del 4</button>
+    <button class= "btn btn5" onclick = "tabe5()"; ondblclick="tabe15()">Tabellina del 5</button>
+    <button class= "btn btn6" onclick = "tabe6()"; ondblclick="tabe16()">Tabellina del 6</button>
+    <button class= "btn btn7" onclick = "tabe7()"; ondblclick="tabe17()">Tabellina del 7</button>
+    <button class= "btn btn8" onclick = "tabe8()"; ondblclick="tabe18()">Tabellina del 8</button>
+    <button class= "btn btn9" onclick = "tabe9()"; ondblclick="tabe19()">Tabellina del 9</button>
+    <button class= "btn btn10" onclick = "tabe10()"; ondblclick="tabe110()">Tabellina del 10</button>
 
 </button>
 
-    <p>Tabellina: </p><p id="output">................</p>
+    <p>Tabellina: </p><p id="output">.......................................</p>
+    <button class="btnc btnc" onclick = "tabeno()">Cancella</button>
+    
 
 
 
@@ -250,5 +178,3 @@ tabelline javascript versione 1.1Consegna in corso...
    
 </body>
 </html>
-Tabelline dall'1 al 10.html
-Visualizzazione di Tabelline dall'1 al 10.html.
