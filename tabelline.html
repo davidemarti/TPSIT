@@ -1,0 +1,254 @@
+3A info - TPSIT - 2021/2022
+3Ai
+tabelline javascript versione 1.1
+Marco Palladino
+•
+26 nov
+100 punti
+Scadenza: 08:00
+stampare tutte 1 al 10 le tabelline sia con alert che con la funzione innerhtml
+
+
+modificare l'output colorando le tabelline in maniera diversa e incrementando il font
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .btn-group button {
+          background-color: #c5310c; /* Green background */
+          border: 1px solid green; /* Green border */
+          color: white; /* White text */
+          padding: 10px 24px; /* Some padding */
+          cursor: pointer; /* Pointer/hand icon */
+          width: 50%; /* Set a width if needed */
+          display: block; /* Make the buttons appear below each other */
+        }
+       
+        .btn-group button:not(:last-child) {
+          border-bottom: none; /* Prevent double borders */
+        }
+       
+        /* Add a background color on hover */
+        .btn-group button:hover {
+          background-color: #f83d04;
+        }
+        </style>
+
+
+</head>
+<body>
+
+    <h1>Tabelline</h1>
+
+    <div class="btn-group">
+      <button onclick="tabellinadel2()">Tabellina del 2 </button>
+      <button onclick="tabellinadel3()">Tabellina del 3</button>
+      <button onclick="tabellinadel4()">Tabellina del 4</button>
+    </div>
+
+    <p id="output">......</p>
+
+
+
+<script>  
+function tabellinadel2Alert() {
+    alert("2 4 6 8 10 12 14 16 18 20");
+}
+function tabellinadel2() {
+    document.getElementById("output").innerHTML="2 4 6 8 10 12 14 16 18 20";
+}
+
+
+
+
+</script>
+
+
+
+
+   
+</body>
+</html>
+Commenti sul corso
+Il tuo lavoro
+Consegnato
+
+Tabelline dall'1 al 10.html
+HTML
+Commenti privati
+tabelline javascript versione 1.1Consegna in corso...
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .btn {
+          background-color: #8ec1e4; /* Green background */
+          border: 1px solid rgb(0, 0, 0); /* Green border */
+          color: white; /* White text */
+          padding: 10px 24px; /* Some padding */
+          cursor: pointer; /* Pointer/hand icon */
+          width: 50%; /* Set a width if needed */
+          display: block; /* Make the buttons appear below each other */
+          transition-duration: 0.5s;
+        }
+       
+        .btn1:hover {
+          background-color: #b4b4b4;
+        }
+        .btn2:hover {
+          background-color: #d38080;
+        }
+        .btn3:hover {
+          background-color: #9dbe76;
+        }
+        .btn4:hover {
+          background-color: #b184d6;
+        }
+        .btn5:hover {
+          background-color: #d4b07b;
+        }
+        .btn6:hover {
+          background-color: #8ed3cf;
+        }
+        .btn7:hover {
+          background-color: #847bd4;
+        }
+        .btn8:hover {
+          background-color: #b8cc81;
+        }
+        .btn9:hover {
+          background-color: #96b2dd;
+        }
+        .btn10:hover {
+          background-color: #c98585;
+        }
+
+        </style>
+
+
+</head>
+<body>
+    <script>  
+        function tabe1 () {
+                    alert("1, 2, 3, 4, 5, 6, 7, 8, 9, 10")
+
+        function tabe2 () {
+                    alert("2, 4, 6 ,8 ,10, 12, 14, 16, 18, 20")
+        
+                }
+            function tabe3 () {
+                    alert("3, 6, 9, 12, 15, 18, 21, 24, 27, 30")
+        
+                }
+                function tabe4 () {
+                    alert("4, 8, 12, 16, 20, 24, 28, 32, 36, 40")
+        
+                }
+                function tabe5 () {
+                    alert("5, 10, 15, 20, 25, 30, 35, 40, 45, 50")
+        
+                }
+                
+                function tabe6 () {
+                    alert("6, 12, 18, 24, 30, 36, 42, 48, 54, 60")
+        
+                }
+                function tabe7 () {
+                    alert("7, 14, 21, 28, 35, 42, 49, 56, 63, 70")
+        
+                }
+                function tabe8 () {
+                    alert("8, 16, 24, 32, 40, 48, 56, 64, 72, 80")
+        
+                }
+                function tabe9 () {
+                    alert("9, 18, 27, 36, 45, 54, 63, 72, 81, 90")
+        
+                }
+                function tabe10 () {
+                    alert("10, 20, 30, 40, 50, 60, 70, 80, 90, 100")
+        
+                }
+
+        }
+        function tabe1() {
+            document.getElementById("output").innerHTML="1, 2, 3, 4, 5, 6, 7, 8, 9, 10";
+        }
+        function tabe2() {
+            document.getElementById("output").innerHTML="2, 4, 6 ,8 ,10, 12, 14, 16, 18, 20";
+        }
+        function tabe3() {
+            document.getElementById("output").innerHTML="3, 6, 9, 12, 15, 18, 21, 24, 27, 30";
+        }
+        function tabe4() {
+            document.getElementById("output").innerHTML="4, 8, 12, 16, 20, 24, 28, 32, 36, 40";
+        }
+        function tabe5() {
+            document.getElementById("output").innerHTML="5, 10, 15, 20, 25, 30, 35, 40, 45, 50";
+        }
+        function tabe6() {
+            document.getElementById("output").innerHTML="6, 12, 18, 24, 30, 36, 42, 48, 54, 60";
+        }
+        function tabe7() {
+            document.getElementById("output").innerHTML="7, 14, 21, 28, 35, 42, 49, 56, 63, 70";
+        }
+        function tabe8() {
+            document.getElementById("output").innerHTML="8, 16, 24, 32, 40, 48, 56, 64, 72, 80";
+        }
+        function tabe9() {
+            document.getElementById("output").innerHTML="9, 18, 27, 36, 45, 54, 63, 72, 81, 90";
+        }
+        function tabe10() {
+            document.getElementById("output").innerHTML="10, 20, 30, 40, 50, 60, 70, 80, 90, 100";
+        }
+
+        
+        
+        
+        
+        </script>
+    <h1>Tabelline</h1>
+    <button class= "btn btn1" onclick = "tabe1()">Tabellina dell'1</button>
+    <button class= "btn btn2" onclick = "tabe2()">Tabellina dell 2</button>
+    <button class= "btn btn3" onclick = "tabe3()">Tabellina del 3</button>
+    <button class= "btn btn4" onclick = "tabe4()">Tabellina del 4</button>
+    <button class= "btn btn5" onclick = "tabe5()">Tabellina del 5</button>
+    <button class= "btn btn6" onclick = "tabe6()">Tabellina del 6</button>
+    <button class= "btn btn7" onclick = "tabe7()">Tabellina del 7</button>
+    <button class= "btn btn8" onclick = "tabe8()">Tabellina del 8</button>
+    <button class= "btn btn9" onclick = "tabe9()">Tabellina del 9</button>
+    <button class= "btn btn10" onclick = "tabe10()">Tabellina del 10</button>
+
+</button>
+
+    <p>Tabellina: </p><p id="output">................</p>
+
+
+
+
+
+
+
+
+   
+</body>
+</html>
+Tabelline dall'1 al 10.html
+Visualizzazione di Tabelline dall'1 al 10.html.
