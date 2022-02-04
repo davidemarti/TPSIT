@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css\martinelli.css">
+    <title>Conto i click che avvengono in 10 secondi</title>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat Subrayada' rel='stylesheet'>
+</head>
+<style>
+    
+    #miodiv
+    {
+        height: 300px;
+        width: 400px;
+        background: beige;
+
+    }   
+
+</style>
+<body>
+    <p id="miocountdown" style="color: black;
+    font-size: 100px;
+    font-family: montserrat subrayada;"></p>
+    <div id="miodiv" style="position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);">
+
+<button class="blue" id="blue" onclick="contaiclick()" style="  padding: 50px;
+position: absolute;
+top: 50%;
+left: 50%;
+-ms-transform: translate(-50%, -50%);
+transform: translate(-50%, -50%);
+font-size: 30px;">
+
+<p id="mioout1">0</p>
+
+</button>
+
+    </div>
+    <script>
+
+
+
+    let contatore=0;
+    function contaiclick()
+    {
+        contatore++
+        document.getElementById("mioout1").innerHTML=contatore.toString();
+        cambiasfondoaldiv();
+    }
+    
+    function cambiasfondoaldiv() 
+    {
+        document.getElementById("miodiv").style.backgroundColor="#c3f4e9";
+    }
+
+
+
+
+
+    </script>
+
+</body>
+</html>
