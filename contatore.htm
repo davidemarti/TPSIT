@@ -17,7 +17,7 @@
         background: beige;
 
     }   
-.blue {
+#blue {
   color: black;
   background-color: rgb(226, 248, 255);
   height: 80px;
@@ -39,7 +39,7 @@ font-family: 'Montserrat Subrayada';
 
 
 
-.blue:hover {
+#blue:hover {
   background-color: #1c8099; 
   color: rgb(235, 235, 235);
 
@@ -48,7 +48,12 @@ font-family: 'Montserrat Subrayada';
 <body>
     <p id="miocountdown" style="color: black;
     font-size: 100px;
-    font-family: montserrat subrayada;"></p>
+    font-family: montserrat subrayada;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);"></p>
     <div id="miodiv" style="position: absolute;
     top: 50%;
     left: 50%;
@@ -63,7 +68,7 @@ left: 50%;
 transform: translate(-50%, -50%);
 font-size: 30px;">
 
-<p id="mioout1">0</p>
+<p id="mioout1">Timer</p>
 
 </button>
 
