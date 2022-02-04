@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css\martinelli.css">
+    <title>Conto i click che avvengono in 10 secondi</title>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat Subrayada' rel='stylesheet'>
+</head>
+<style>
+    
+    #miodiv
+    {
+        height: 300px;
+        width: 400px;
+        background: beige;
+
+    }   
+
+</style>
+<body>
+    <p id="miocountdown" style="color: black;
+    font-size: 100px;
+    font-family: montserrat subrayada;"></p>
+    <div id="miodiv" style="position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);">
+
+<button class="blue" id="blue" onclick="contaiclick()" style="  padding: 50px;
+position: absolute;
+top: 50%;
+left: 50%;
+-ms-transform: translate(-50%, -50%);
+transform: translate(-50%, -50%);
+font-size: 30px;">
+
+<p id="mioout1">0</p>
+
+</button>
+
+    </div>
+    <script>
+            const miointervallo=setInterval(startcountdown,1000)
+
+    let countdown=3;
+
+function startcountdown()
+{
+document.getElementById("miocountdown").innerHTML=countdown.toString();
+countdown--;
+if (countdown==-1)
+{
+    clearInterval(miointervallo)
+    document.getElementById("miocountdown").innerHTML="Start";
+}
+}
+
+
+
+
+
+
+
+    </script>
+
+</body>
+</html>
