@@ -11,7 +11,7 @@
 
     <p class = "txt1"> CARBOIDRATI:</p><input type="text" name="Hsomma" value="7"><br>
 
-    <p class = "txt1"> PROTEINE:</p><input type="text" name="Huguale" value="4"><br>
+    <p class = "txt1"> PROTEINE:</p><input type="text" name="Huguale" value="4"><br><br>
 
 </form>
 <style>
@@ -28,7 +28,7 @@
    text-decoration: none;
    display: inline-block;
    font-family: 'Fredoka One', cursive;;
-   font-size: 30px;
+   font-size: 40px;
    margin: 4px 2px;
    transition-duration: 0.5s;
    cursor: pointer;
@@ -99,27 +99,23 @@
 <div id="div2">
 <div id="miodiv">
 
-<button onclick="myFunction()" class="button1"> Converti in kcalorie</button> 
-
-<button onclick="kcal()" class="button1"> Converti  in calorie</button>
-
-<button onclick="pro()" class="button1"> Converti  in proteine</button>
+<button onclick="myFunction()" class="button1"> Converti </button>
 
 
 
 <p class = "txt2">Grassi:</p>
-<p id="base" class = "txt2"></p> <br>
+<p id="base" class = "txt2"></p>
 <p class = "txt2">Calorie:</p>
-<p id="arrivo" class = "txt2"></p><br>
+<p id="arrivo" class = "txt2"></p>
 <p class = "txt2">Carboidrati:</p>
-<p id="somma" class = "txt2"></p><br>
+<p id="somma" class = "txt2"></p>
 
 <p class = "txt1">Grassi in kcal:</p>
-<p id="demo" class = "txt1"></p><br>
+<p id="demo" class = "txt1"></p>
 <p class = "txt1">Carboidrati in calorie:</p>
-<p id="demi" class = "txt1"></p><br>
+<p id="demi" class = "txt1"></p>
 <p class = "txt1">Proteine:</p>
-<p id="demio" class = "txt1"></p><br>
+<p id="demio" class = "txt1"></p>
 </div>
 </div>
 <script>
@@ -128,49 +124,43 @@ function myFunction() {
 var x = document.getElementById("frm1");
 
 var base=x.elements[0].value;  
-document.getElementById("base").innerHTML =base;
-
 var arrivo=x.elements[1].value;
-document.getElementById("arrivo").innerHTML =arrivo;
+
 
 document.getElementById("demo").innerHTML =Dislivello(base,arrivo);
  
-}
-function kcal(){
+
 
     
 var x = document.getElementById("frm1");
 
 var somma=x.elements[2].value;
-document.getElementById("somma").innerHTML =somma;
-
-var arrivo=x.elements[1].value;
-document.getElementById("arrivo").innerHTML =arrivo;
-
-document.getElementById("demi").innerHTML =altezza(somma,arrivo);
-}
-
-function Dislivello(numero1,numero2){
-return numero1*numero2;
-}
-function altezza(numero2,numero3){
-return numero2*numero3;
-}
+var base=x.elements[0].value;  
 
 
-function pro(){
+document.getElementById("demi").innerHTML = altezza(somma,base);
+
 
 
 var x = document.getElementById("frm1");
 
 var base=x.elements[0].value;  
-document.getElementById("base").innerHTML = base;
+var uguale=x.elements[3].value;
 
-var uguale=x.elements[1].value;
-document.getElementById("uguale").innerHTML = uguale;
 
-document.getElementById("demio").innerHTML = Dislivellio(base,uguale);
+document.getElementById("demio").innerHTML = Dislivellio (base,uguale);
  
+}
+
+function Dislivello(numero1,numero2){
+return numero1*numero2;
+}
+function altezza(numero2,arrivo){
+return numero2*arrivo;
+}
+
+function Dislivellio(numero3,uguale){
+return numero3*uguale;
 }
 </script>
 
