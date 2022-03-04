@@ -5,7 +5,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
 <body>
 <form id="frm1" >
-    <p class = "txt1">GRASSI: </p><input type="text" name="Hbase" value="0"><br>
+    <p class = "txt1">GRASSI: </p><input type="text" name="Hbase" value="INSERISCI IL VALORE"><br>
 
     <p class = "txt1"> CALORIE:</p><input type="text" name="Harrivo" value="9"><br>
 
@@ -15,6 +15,12 @@
 
 </form>
 <style>
+  .div {
+    width: 500px;
+    height: 500px;
+    border: #dddddd solid 2px;
+    top
+  }
     body {
  background-color: #212121;
  }
@@ -50,7 +56,7 @@
  }
  
  input[type=text], select {
-   width: 5%;
+   width: 14%;
    padding: 12px 20px;
    margin: 8px 0;
    display: inline-block;
@@ -116,52 +122,53 @@
 <p id="demi" class = "txt1"></p>
 <p class = "txt1">Proteine:</p>
 <p id="demio" class = "txt1"></p>
+<p class = "txt1">Calorie totali:</p>
+<p id="demu" class = "txt1"></p>
 </div>
 </div>
 <script>
 function myFunction() {
 
 var x = document.getElementById("frm1");
-
 var base=x.elements[0].value;  
 var arrivo=x.elements[1].value;
 
-
 document.getElementById("demo").innerHTML =Dislivello(base,arrivo);
- 
 
-
-    
 var x = document.getElementById("frm1");
-
 var somma=x.elements[2].value;
 var base=x.elements[0].value;  
 
 
 document.getElementById("demi").innerHTML = altezza(somma,base);
 
-
-
 var x = document.getElementById("frm1");
-
 var base=x.elements[0].value;  
 var uguale=x.elements[3].value;
 
-
 document.getElementById("demio").innerHTML = Dislivellio (base,uguale);
+
+document.getElementById("demu").innerHTML = Dislivelliou  (base,uguale,arrivo);
+
  
 }
 
 function Dislivello(numero1,numero2){
-return numero1*numero2;
+return numero6=numero1*numero2;
 }
 function altezza(numero2,arrivo){
-return numero2*arrivo;
+return numero7=numero2*arrivo;
 }
 
 function Dislivellio(numero3,uguale){
-return numero3*uguale;
+return numero8=numero3*uguale;
 }
+
+function Dislivelliou (base,uguale,arrivo){
+return numero6+numero7+numero8;
+}
+
+
 </script>
 
 </body>
