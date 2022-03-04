@@ -1,140 +1,178 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <title>Peso</title>
-    <link href="style.css" rel="stylesheet" type="text/css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
-  </head>
-  <body>
-    
-    
+<body>
+<form id="frm1" >
+    <p class = "txt1">GRASSI: </p><input type="text" name="Hbase" value="0"><br>
 
-<form id="frm1" class= "frm1" >
- <p class = "txt1">Peso Grasso (in grammi):</p> <input type="text" name="Hbase" value="0"><br><br><br>
+    <p class = "txt1"> CALORIE:</p><input type="text" name="Harrivo" value="9"><br>
 
+    <p class = "txt1"> CARBOIDRATI:</p><input type="text" name="Hsomma" value="7"><br>
 
+    <p class = "txt1"> PROTEINE:</p><input type="text" name="Huguale" value="4"><br>
+
+</form>
+<style>
+    body {
+ background-color: #212121;
+ }
+ 
+ .button1 {
+ 
+   
+   color: #ffffff;
+   padding: 20px 40px;
+   text-align: center;
+   text-decoration: none;
+   display: inline-block;
+   font-family: 'Fredoka One', cursive;;
+   font-size: 30px;
+   margin: 4px 2px;
+   transition-duration: 0.5s;
+   cursor: pointer;
+
+   background-color:  #212121;  
+   border: 5px solid #aec5f9;
+   width:400px;
+   height:100px;
+ 
+ 
+ }
+ 
+ 
+ .button1:hover {
+ 
+ background: #aec5f9 ;
+   color: #212121;
+   border: 3px solid #212121;
+ }
+ 
+ input[type=text], select {
+   width: 5%;
+   padding: 12px 20px;
+   margin: 8px 0;
+   display: inline-block;
+   border: 3px solid #aec5f9;
+   border-radius: 4px;
+   box-sizing: border-box;
+   background: #212121;
+     font-family: 'Fredoka One', cursive;;
+   font-size: 20px;
+   color: white;
+ 
+   
+ }
+ 
+ .txt1 {
+   font-family: 'Fredoka One', cursive;
+   font-size: 30px;
+   color: white;
+   
+ }
+  
+ .txt2 {
+   font-family: 'Fredoka One', cursive;
+   font-size: 1px;
+   color: #212121;
+   
+ }
+ 
+ input[type=text] {
+   transition: width 0.8s ease-in-out;
+ }
+ 
+ input[type=text]:focus {
+   width: 30%;
+ }
+ 
+ 
 
  
-<p id="arrivo"></p>
  
+ 
+ 
+     </style>
+</style>
 
-<button class = "button1" onclick="myFunction()">Converti in kcal</button><br><br><br><br></br>
-<p class = "txt1">Conversione: </p>
-  <p id="demo" class = "txt1"></p>
+<div id="div2">
+<div id="miodiv">
 
-<p id="base" class = "txt2"></p>
+<button onclick="myFunction()" class="button1"> Converti in kcalorie</button> 
 
-<p id="arrivo" class = "txt2"></p>
-<button class = "button1" onclick="Calcolo()">Converti in g</button><br><br><br><br></br>
-<p id="tot1" class = "txt2"></p>
- <style>
-   body {
-background-color: #212121;
-}
+<button onclick="kcal()" class="button1"> Converti  in calorie</button>
 
-.button1 {
-
-  
-  color: #ffffff;
-  padding: 20px 40px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-family: 'Fredoka One', cursive;;
-  font-size: 20px;
-  margin: 4px 2px;
-  transition-duration: 0.5s;
-  cursor: pointer;
-  font-size: 50px;
-  background-color:  #212121;  
-  border: 5px solid #aec5f9;
-  width:800px;
-  height:100px;
-float: left;
-
-}
-
-
-.button1:hover {
-
-background: #aec5f9 ;
-  color: #212121;
-  border: 3px solid #212121;
-}
-
-input[type=text], select {
-  width: 5%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 3px solid #aec5f9;
-  border-radius: 4px;
-  box-sizing: border-box;
-  background: #212121;
-    font-family: 'Fredoka One', cursive;;
-  font-size: 20px;
-  color: white;
-  float: left;
-  
-}
-
-.txt1 {
-  font-family: 'Fredoka One', cursive;;
-  font-size: 40px;
-  color: white;
-  
-}
-
-input[type=text] {
-  transition: width 0.8s ease-in-out;
-}
-
-input[type=text]:focus {
-  width: 30%;
-}
-
-
-.txt1 {
-  font-family: 'Fredoka One', cursive;;
-  font-size: 40px;
-  color: #212121;
-  
-}
+<button onclick="pro()" class="button1"> Converti  in proteine</button>
 
 
 
+<p class = "txt2">Grassi:</p>
+<p id="base" class = "txt2"></p> <br>
+<p class = "txt2">Calorie:</p>
+<p id="arrivo" class = "txt2"></p><br>
+<p class = "txt2">Carboidrati:</p>
+<p id="somma" class = "txt2"></p><br>
 
-    </style>
-  <script>
+<p class = "txt1">Grassi in kcal:</p>
+<p id="demo" class = "txt1"></p><br>
+<p class = "txt1">Carboidrati in calorie:</p>
+<p id="demi" class = "txt1"></p><br>
+<p class = "txt1">Proteine:</p>
+<p id="demio" class = "txt1"></p><br>
+</div>
+</div>
+<script>
+function myFunction() {
 
-
-
-
-    function myFunction() {
-
-var arrivo = 9;
 var x = document.getElementById("frm1");
 
 var base=x.elements[0].value;  
 document.getElementById("base").innerHTML =base;
 
-  
-document.getElementById("demo").innerHTML = Dislivello(base,arrivo);
-}
+var arrivo=x.elements[1].value;
+document.getElementById("arrivo").innerHTML =arrivo;
 
-function Dislivello(base,arrivo){
-return base*arrivo;
+document.getElementById("demo").innerHTML =Dislivello(base,arrivo);
+ 
 }
+function kcal(){
 
-funtion Calcolo()
-{
-    tot1 = frm1*4;
-}
     
-  </script>
-  </body>
+var x = document.getElementById("frm1");
+
+var somma=x.elements[2].value;
+document.getElementById("somma").innerHTML =somma;
+
+var arrivo=x.elements[1].value;
+document.getElementById("arrivo").innerHTML =arrivo;
+
+document.getElementById("demi").innerHTML =altezza(somma,arrivo);
+}
+
+function Dislivello(numero1,numero2){
+return numero1*numero2;
+}
+function altezza(numero2,numero3){
+return numero2*numero3;
+}
+
+
+function pro(){
+
+
+var x = document.getElementById("frm1");
+
+var base=x.elements[0].value;  
+document.getElementById("base").innerHTML = base;
+
+var uguale=x.elements[1].value;
+document.getElementById("uguale").innerHTML = uguale;
+
+document.getElementById("demio").innerHTML = Dislivellio(base,uguale);
+ 
+}
+</script>
+
+</body>
 </html>
