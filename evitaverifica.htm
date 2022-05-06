@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <title>Verifica</title>
+
+
+
+</head>
+
+
+<body>
+
+
+    <div class = "container text-center">
+    <h1>Verifica in classe (per evitare il compito di recupero)</h1>
+    <br>
+
+    <button id="miobutton" onclick="n840()">Fattorizza 840</button>
+    <button id="miobutton" onclick="juvemerda()">Fattorizza 840 con 'juve merda'</button>
+    <button id="miobutton" onclick="primo()">Numero primo dopo 840</button>
+    <br><br>
+    <button id="miobutton" onclick="primo2()">n° primo dopo 840 * n° primo dopo 100000</button>
+    <button id="miobutton" onclick="fatlast()">Fattorizza il totale</button>
+
+    <br><br>
+
+    <p id="n1Out"></p>
+
+
+
+
+    </div>
+</body>
+
+<script>
+        function isPrime(n)
+        {
+            //ritorna a true se il numero è primo, cioè il numero n ha 2 fattori, 1 e sè stesso. Altrimenti ritorna false se n non è primo (ha + di 2 fattori)
+    
+            //ipotesi: tutti i n sono primi
+            let OutPrimo = true;
+            for (let fattore = 2; fattore <= n/2; fattore++) //l'ultimo fattore di un numero è sempre (se il numero non è primo) la metà del numero stesso
+            {
+                if (n%fattore==0)
+                {
+                    OutPrimo = false;
+                }
+            }
+            return OutPrimo;
+        }
+
+    function n840()
+    {
+        let n = 840;
+        
+          let fattore=1;
+          let fattoriOUT="";
+          let contafattori=1;
+           for(fattore=1;fattore<=n/2;fattore++)
+           {
+               if(n%fattore==0)
+               {
+                 fattoriOUT=fattoriOUT+fattore+ " ";
+                 contafattori++;
+               }
+           }
+           document.getElementById("n1Out").innerHTML = fattoriOUT+ " #" + contafattori;
+    }
+
+    function juvemerda()
+    {
+        let n = 840;
+        
+          let fattore=1;
+          let fattoriOUT="";
+          let contafattori=1;
+           for(fattore=1;fattore<=n/2;fattore++)
+           {
+               if(n%fattore==0)
+               {
+                 fattoriOUT=fattoriOUT+fattore+ "<br>juve merda<br>";
+                 contafattori++;
+               }
+           }
+           document.getElementById("n1Out").innerHTML = fattoriOUT+ "<br>Sono " + contafattori + " i fattori (Juve merda)";
+    }
+
+        function primo()
+        {
+            let i = 840;
+            let sec;
+            do {
+                i++;
+                if (isPrime(i)==true)
+                {
+                    document.getElementById("n1Out").innerHTML = "Il primo numero primo dopo 840 è " + i;
+                    sec = i;
+                }
+            } while (isPrime(i)== false);
+            
+        }
+
+        function primo2()
+        {
+
+            let tot = 0;
+            let i = 840;
+            let sec;
+            do {
+                i++;
+                if (isPrime(i)==true)
+                {
+                    sec = i;
+                }
+            } while (isPrime(i)== false);
+            
+    
+
+
+            i = 99999;
+            do {
+                i++;
+                if (isPrime(i)==true)
+                {
+                    tot = sec*i
+                    document.getElementById("n1Out").innerHTML = "Il primo numero primo dopo 100000 è " + i + " e la moltiplicazione con " + sec + " vale " + tot;
+                }
+            } while (isPrime(i) == false);
+        }
+
+
+        function fatlast()
+        {
+           
+            let tot = 0;
+            let i = 840;
+            let sec;
+            do {
+                i++;
+                if (isPrime(i)==true)
+                {
+                    sec = i;
+                }
+            } while (isPrime(i)== false);
+            
+    
+
+
+            i = 99999;
+            do {
+                i++;
+                if (isPrime(i)==true)
+                {
+                    tot = sec*i;
+                }
+            } while (isPrime(i) == false);
+
+
+
+
+
+
+
+          let fattore=1;
+          let fattoriOUT="";
+          let contafattori=1;
+           for(fattore=1;fattore<=tot/2;fattore++)
+           {
+               if(tot%fattore==0)
+               {
+                 fattoriOUT=fattoriOUT+fattore+ " ";
+                 contafattori++;
+               }
+           }
+           document.getElementById("n1Out").innerHTML = "L'unico fattore oltre a 1 è " + tot + ", cioè se stesso";
+        }
+
+    </script>
+</html>
