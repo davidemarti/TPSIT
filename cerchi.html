@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<style>
+    body {
+margin: 0px;
+padding: 0px;
+}
+
+</style>
+
+</head>
+<body>
+    <canvas id="myCanvas" width="1000" height="1000"></canvas>
+
+
+
+</body>
+
+<script>
+var canvas = document.getElementById('myCanvas');
+var context = canvas.getContext('2d');
+
+
+
+var radius = 5;
+
+let circle = new Path2D();  // <<< Declaration
+let circle2 = new Path2D();  // <<< Declaration
+let circle3 = new Path2D();  // <<< Declaration
+let circle4 = new Path2D();  // <<< Declaration
+let circle5 = new Path2D();  // <<< Declaration
+let circle6 = new Path2D();  // <<< Declaration
+let circle7 = new Path2D();  // <<< Declaration
+let circle8 = new Path2D();  // <<< Declaration
+let circle9 = new Path2D();  // <<< Declaration
+let circle10 = new Path2D();  // <<< Declaration
+
+let j = 100;
+
+circle.arc(j, 100, radius, 0, 2 * Math.PI, false);
+circle2.arc(120, 100, radius, 0, 2 * Math.PI, false);
+circle3.arc(140, 100, radius, 0, 2 * Math.PI, false);
+circle4.arc(160, 100, radius, 0, 2 * Math.PI, false);
+circle5.arc(180, 100, radius, 0, 2 * Math.PI, false);
+circle6.arc(200, 100, radius, 0, 2 * Math.PI, false);
+circle7.arc(220, 100, radius, 0, 2 * Math.PI, false);
+circle8.arc(240, 100, radius, 0, 2 * Math.PI, false);
+circle9.arc(260, 100, radius, 0, 2 * Math.PI, false);
+circle10.arc(280, 100, radius, 0, 2 * Math.PI, false);
+
+
+
+context.fill(circle); //   <<< pass circle to context
+context.fill(circle2); //   <<< pass circle to context
+context.fill(circle3); //   <<< pass circle to context
+context.fill(circle4); //   <<< pass circle to context
+context.fill(circle5); //   <<< pass circle to context
+context.fill(circle6); //   <<< pass circle to context
+context.fill(circle7); //   <<< pass circle to context
+context.fill(circle8); //   <<< pass circle to context
+context.fill(circle9); //   <<< pass circle to context
+context.fill(circle10); //   <<< pass circle to context
+
+
+
+</script>
+</html>
