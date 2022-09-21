@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Passion+One&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            background-color: #4b3832;
+        }
+
+        .d1 {
+            background-color: #282b30;
+            border: 5px solid #3c2f2f;
+            margin: auto;
+            width: 50%;
+            height: 600px;
+            margin-top: 30px; }
+
+
+
+            .lilb{
+                background-color: #be9b7b;
+                width: 33.33334%;
+                height: 150px;
+                border: 5px solid #3c2f2f;
+                float:left;
+                font-size: 100px;
+                color: #fff4e6;
+
+                
+            }
+
+            .bott {
+                font-family: Passion One;
+                width: 50%;
+                height: 150px;
+                border: 5px solid #3c2f2f;
+                float:left;
+                font-size: 100px;
+                color: #fff4e6;
+                background-color: #854442;
+}
+            
+    </style>
+
+</head>
+
+<body>
+
+    <script>
+        let tot=0;
+
+        function su(){
+
+    
+        tot = tot+1;
+        document.getElementById("bot").innerHTML = "V = " + tot;
+    }
+
+    function giu(){
+
+    
+tot = tot-1;
+document.getElementById("bot").innerHTML = "V = " + tot;
+}
+
+
+
+let tot2=0;
+
+function sin(){
+
+    
+tot2 = tot2-1;
+document.getElementById("bot2").innerHTML = "O = " + tot2;
+}
+
+function des(){
+
+
+tot2 = tot2+1;
+document.getElementById("bot2").innerHTML = "O = " + tot2;
+}
+
+
+    </script>
+    <div class="d1">
+
+        <button class="lilb"></button>
+        <button class="lilb" id="su" onclick="su()" >⇡</button>
+        <button class="lilb"></button> 
+        <button class="lilb" id="su" onclick="sin()" >⇠</button>
+        <button class="lilb"></button>
+        <button class="lilb" id="su" onclick="des()" >⇢</button> 
+        <button class="lilb"></button>
+        <button class="lilb" id="su" onclick="giu()" >⇣</button>
+        <button class="lilb"></button> 
+
+        <button class= "bott" id="bot">V = Ø</button>
+        <button class= "bott" id="bot2">O = Ø</button>
+
+
+    </div>
+</body>
+</html>
